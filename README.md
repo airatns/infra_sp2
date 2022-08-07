@@ -1,28 +1,71 @@
-## **Что за проекту**
+# Infra_SP2
+
+В данном проекте реализовал задачу по сборке и запуску Yamdb из контейнера.
+
 Yamdb - это проект, который собирает отзывы пользователей на произведения.
 
-## **Шаблон наполнения env-файла**
-* DB_ENGINE
-* DB_NAME
-* POSTGRES_USERя
-* P0OSTGRES_PASSWORD
-* DB_HOST
-* DB_PORT
+Бэкенд для проекта Yamdb реализован по ссылке:
 
-## **Описание команд для запуска приложения в контейнерах**
-1. Загрузить Docker-образ
->docker pull airatns/yamdb:v1
+>*https://github.com/airatns/api_yamdb*
 
-2. Запустить контейнер
-sudo docker run -d -p 8080:80 airatns/yamdb:v1
+## **Стек технологий**
 
->docker run --name <имя контейнера> -it -p 8000:8000 yamdb
+Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
-3. Проверить работу проекта
->http://localhost/
+## **Подготовка:**
 
-## **Описание команд для заполнения базы данными**
-1. Зайти в консоль сервиса web в папку с manage.py
+Клонировать репозиторий и перейти в него в командной строке:
 
-2. Залить данные из файла с дампом
->docker-compose exec web python manage.py loaddata fixtures.json
+>*git clone git@github.com:airatns/infra_sp2.git*
+
+Прописать параметры окружения в файле .env:
+
+* DB_ENGINE=django.db.backends.postgresql
+
+* DB_NAME=postgres
+
+* POSTGRES_USER=postgres
+
+* POSTGRES_PASSWORD=postgres
+
+* DB_HOST=db
+
+* DB_PORT=5432
+
+## **Сборка и запуск приложения в контейнерах:**
+
+Перейти в папку и запустить утилиту **docker-compose**:
+
+>*cd infra/*
+
+>*docker-compose up -d --build*
+
+По окончании работы **docker-compose** сообщит, что контейнеры собраны и запущены:
+
+>*Creating infra_db_1 ... done*
+
+>*Creating infra_web_1 ... done*
+
+>*Creating infra_nginx_1 ... done*
+
+Выполнить миграции, создать суперпользователя и собрать статику:
+
+>*docker-compose exec web python manage.py migrate*
+
+>*docker-compose exec web python manage.py createsuperuser*
+
+>*docker-compose exec web python manage.py collectstatic --no-input*
+
+## **Наполнение базы тестовыми данными:**
+
+Перейти из текущей папки в папку с **manage.py** и запустить подгрузку тестовых данных:
+
+>*cd ..*
+
+>*cd api_yamdb*
+
+>*docker-compose exec web python manage.py loaddata fixtures.json*
+
+## **Проверить, что приложение успешно разворачивается:**
+
+>*http://localhost/admin/*
