@@ -62,7 +62,7 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 >*cd ..*
 
->*cd api_yamdb*
+>*cd api_yamdb/*
 
 >*docker-compose exec web python manage.py loaddata fixtures.json*
 
