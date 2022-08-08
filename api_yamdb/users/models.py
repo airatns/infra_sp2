@@ -86,8 +86,8 @@ class User(AbstractUser):
     is_admin = models.BooleanField()
 
     objects = UserManager()
-    """Сообщаем Django, что для работы с объектами этого типа нужно использовать
-    определенный выше класс UserManager.
+    """Сообщаем Django, что для работы с объектами этого типа
+    нужно использовать определенный выше класс UserManager.
     """
 
     REQUIRED_FIELDS = ['email']
