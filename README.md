@@ -20,6 +20,10 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 Прописать параметры окружения в файле .env:
 
+* SECRET_KEY=<SECRET_KEY>
+
+* DEBUG=<True or False>
+
 * DB_ENGINE=django.db.backends.postgresql
 
 * DB_NAME=postgres
