@@ -72,13 +72,9 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 >*Creating infra_nginx_1 ... done*
 
-Выполнить миграции, создать суперпользователя и собрать статику:
-
->*docker-compose exec web python manage.py migrate*
+Создать суперпользователя:
 
 >*docker-compose exec web python manage.py createsuperuser*
-
->*docker-compose exec web python manage.py collectstatic --no-input*
 
 ## **Наполнение базы тестовыми данными:**
 
