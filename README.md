@@ -22,7 +22,7 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 * SECRET_KEY=<SECRET_KEY>
 
-* DEBUG=<True or False>
+* DEBUG=<True | False>
 
 * DB_ENGINE=django.db.backends.postgresql
 
