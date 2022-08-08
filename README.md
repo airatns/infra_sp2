@@ -8,6 +8,26 @@ YaMDb - это проект, который собирает отзывы пол
 
 >*https://github.com/airatns/api_yamdb*
 
+## **Регистрация нового пользователя**
+Для регистрации сделайте POST-запрос с данными **email** и **username** на адрес:
+
+>*http://127.0.0.1:8000/api/v1/auth/signup/*
+
+Затем на ваш электронный почтовый ящик придёт **confirmation_code**.
+
+## **Получение JWT-токена**
+Для аутентификации сделайте POST-запрос с данными **username** и **confirmation_code** на адрес:
+
+>*http://127.0.0.1:8000/api/v1/auth/token/*
+
+Вам будет выдан **token** для запросов к API.
+
+Срок действия токена **14 дней**.
+
+### **Пример использования JWT-токена**
+
+>*Bearer ey8Df...*
+
 ## **Стек технологий**
 
 Python, Django, Docker, Gunicorn, Nginx, Ubuntu
@@ -19,6 +39,10 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 >*git clone git@github.com:airatns/infra_sp2.git*
 
 Прописать параметры окружения в файле .env:
+
+* SECRET_KEY=<SECRET_KEY>
+
+* DEBUG=<True | False>
 
 * DB_ENGINE=django.db.backends.postgresql
 
@@ -48,13 +72,9 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 >*Creating infra_nginx_1 ... done*
 
-Выполнить миграции, создать суперпользователя и собрать статику:
-
->*docker-compose exec web python manage.py migrate*
+Создать суперпользователя:
 
 >*docker-compose exec web python manage.py createsuperuser*
-
->*docker-compose exec web python manage.py collectstatic --no-input*
 
 ## **Наполнение базы тестовыми данными:**
 
