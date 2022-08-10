@@ -76,13 +76,7 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 >*docker-compose exec web python manage.py createsuperuser*
 
-## **Наполнение базы тестовыми данными:**
-
-Перейти из текущей папки в папку с **manage.py** и загрузить тестовые данные:
-
->*cd ..*
-
->*cd api_yamdb/*
+Наполнение базы тестовыми данными:
 
 >*docker-compose exec web python manage.py loaddata fixtures.json*
 
