@@ -8,6 +8,10 @@ YaMDb - это проект, который собирает отзывы пол
 
 >*https://github.com/airatns/api_yamdb*
 
+## **Стек технологий**
+
+Python, Django, Docker, Gunicorn, Nginx, Ubuntu
+
 ## **Регистрация нового пользователя**
 Для регистрации сделайте POST-запрос с данными **email** и **username** на адрес:
 
@@ -27,10 +31,6 @@ YaMDb - это проект, который собирает отзывы пол
 ### **Пример использования JWT-токена**
 
 >*Bearer ey8Df...*
-
-## **Стек технологий**
-
-Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 ## **Подготовка:**
 
