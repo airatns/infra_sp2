@@ -40,36 +40,26 @@ Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 Прописать параметры окружения в файле .env:
 
-* SECRET_KEY=<SECRET_KEY>
-
-* DEBUG=<True | False>
-
-* DB_ENGINE=django.db.backends.postgresql
-
-* DB_NAME=postgres
-
-* POSTGRES_USER=postgres
-
-* POSTGRES_PASSWORD=postgres
-
-* DB_HOST=db
-
+* SECRET_KEY=<SECRET_KEY> \
+* DEBUG=<True | False> \
+* DB_ENGINE=django.db.backends.postgresql \
+* DB_NAME=postgres \
+* POSTGRES_USER=postgres \
+* POSTGRES_PASSWORD=postgres \
+* DB_HOST=db \
 * DB_PORT=5432
 
 ## **Сборка и запуск приложения в контейнерах:**
 
 Перейти в папку и запустить утилиту **docker-compose**:
 
->*cd infra/*
-
+>*cd infra/* \
 >*docker-compose up -d --build*
 
 По окончании работы **docker-compose** сообщит, что контейнеры собраны и запущены:
 
->*Creating infra_db_1 ... done*
-
->*Creating infra_web_1 ... done*
-
+>*Creating infra_db_1 ... done* \
+>*Creating infra_web_1 ... done* \
 >*Creating infra_nginx_1 ... done*
 
 Создать суперпользователя:
