@@ -1,5 +1,14 @@
 # Infra_SP2
 
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/sqlite/sqlite-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/nginx/nginx-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/ubuntu/ubuntu-plain-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+
 В данном проекте реализовал задачу по сборке и запуску **YaMDb** в контейнерах **Docker**. Создан дамп базы.
 
 YaMDb - это проект, который собирает отзывы пользователей на произведения.
@@ -7,10 +16,6 @@ YaMDb - это проект, который собирает отзывы пол
 Бэкенд для проекта YaMDb реализован по ссылке:
 
 >*https://github.com/airatns/api_yamdb*
-
-## **Стек технологий**
-
-Python, Django, Docker, Gunicorn, Nginx, Ubuntu
 
 ## **Регистрация нового пользователя**
 Для регистрации сделайте POST-запрос с данными **email** и **username** на адрес:
